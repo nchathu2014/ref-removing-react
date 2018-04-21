@@ -3,6 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+    testClick(){
+        console.log(this.refs.myInput.value);
+    }
+
   render() {
     return (
       <div className="App">
@@ -11,7 +16,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+            <input type="text" id="test-box" ref="myInput"/>
+
+            <button onClick={this.testClick.bind(this)}>TEST</button>
         </p>
       </div>
     );
